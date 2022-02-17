@@ -1,3 +1,4 @@
+require "pry"
 # Write your code below game_hash
 def game_hash
   {
@@ -126,4 +127,17 @@ def game_hash
   }
 end
 
-# Write code here
+
+def num_points_scored(player_name)
+     game_hash.each do |location, team_hash|
+      team_hash[:players].each do |player_hash|
+        if player_hash[:player_name] == player_name 
+          return player_hash[:points] 
+        end
+      end
+    end
+end
+
+def shoe_size(player_name)
+  shoe_size.all.filter {|shoe_size == self|}
+end
